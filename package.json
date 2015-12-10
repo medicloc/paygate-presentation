@@ -1,0 +1,12 @@
+{
+  "name": "payment-gateway-presentation",
+  "description": "Our simple visual explanation on how to use payment gateway",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "socket.io":"~1.3.7"
+  }
+}

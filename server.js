@@ -68,6 +68,8 @@ touch.on('connection',function(socket){
 	});
 })
 
-http.listen(4000,function(){
-	console.log("listening on http://localhost:4000");
+var port = process.env.PORT || 4000;
+
+http.listen(port,function(){
+	console.log("listening on http://localhost:"+port);
 });
