@@ -68,8 +68,12 @@ touch.on('connection',function(socket){
 	});
 })
 
-var port = process.env.PORT || 4000;
+// var port = process.env.PORT || 4000
 
-http.listen(port,function(){
-	console.log("listening on http://localhost:"+port);
+/*----------  For Open Shift Deployment  ----------*/
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
+http.listen(server_port,server_ip_address,function(){
+	console.log("listening on "+server_ip_address+':'+server_port);
 });
